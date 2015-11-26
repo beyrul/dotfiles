@@ -1,0 +1,2 @@
+#only this should be added
+GRUB_CMDLINE_LINUX_DEFAULT="video=vesa:off vga=normal quiet"
