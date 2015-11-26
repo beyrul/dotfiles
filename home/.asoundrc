@@ -1,0 +1,19 @@
+pcm.btheadset {
+    type plug
+    slave {
+        pcm {
+            type bluetooth
+            device 50:C9:71:2B:B0:39
+            profile "auto"
+        }   
+    }   
+
+    hint {
+        show on
+        description "Jabra STREET 2"
+    }   
+}
+
+ctl.btheadset {
+  type bluetooth
+}

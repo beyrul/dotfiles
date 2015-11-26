@@ -1,0 +1,9 @@
+[core]
+        editor = subl3
+[diff]
+        guitool = meld
+        external = /home/zetxx/.linux_configs/tools/git/git-meld
+[merge]
+        tool = meld
+[mergetool "meld"]
+        path = /usr/bin/meld
