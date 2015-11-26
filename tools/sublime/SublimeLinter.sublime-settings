@@ -10,7 +10,7 @@
             "eslint": {
                 "@disable": false,
                 "args": [
-                    "-c=${home}/.config/lints/.eslintrc"
+                    "-c=${home}/.confs/tools/lints/rules/.eslintrc"
                 ],
                 "excludes": []
             },
@@ -25,7 +25,9 @@
         "no_column_highlights_line": false,
         "passive_warnings": true,
         "paths": {
-            "linux": [],
+            "linux": [
+                "/home/zetxx/npm/bin"
+            ],
             "osx": [],
             "windows": []
         },
