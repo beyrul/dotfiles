@@ -1,0 +1,4 @@
+/dev/nvme0n1p2      	/         	ext4      	defaults,noatime,discard          	0 1
+/dev/nvme0n1p1      	/boot     	vfat      	defaults,noatime,discard          	0 2
+/dev/nvme0n1p3      	/home     	ext4      	defaults,noatime,discard          	0 1
+/dev/nvme0n1p4          /store           ext4            defaults,noatime,discard                0 1
