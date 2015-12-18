@@ -1,4 +1,4 @@
-Switch Content Adaptive Backlight ON/OFF for **QHD** displays
+Switch Content Adaptive Backlight ON/OFF for **QHD** displays only!
 =========================================
 
 1. **Install latest video driver**
