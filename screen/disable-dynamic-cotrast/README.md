@@ -1,5 +1,9 @@
-# Please kindly note: fix is suitable only for QHD displays because FHD has a locked firmware management.
+Switch Content Adaptive Backlight ON/OFF for **QHD** displays
+=========================================
 
-### Just download, extract, open the "CABC off" folder, run TCON_DP_REWORK_TOOL.exe as admin, and off you go.
+1. **Install latest video driver**
+2. Download
+3.  Extract
+4. Run as admin executable in CABC off folder for switch off or ... on folder for switch on
 
-Source: https://github.com/advancingu/XPS13Linux/issues/2#issuecomment-160201004
+[Source](https://github.com/advancingu/XPS13Linux/issues/2#issuecomment-160201004)
