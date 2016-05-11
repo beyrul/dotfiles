@@ -1,0 +1,91 @@
+#enable wireless
+ip link set wlp58s0 up
+
+#connect
+wpa_supplicant -D nl80211,wext -i wlp58s0 -c <(wpa_passphrase "your_SSID" "your_key")
+#if no erros repeat with -B switch to the above command to run it in the background)
+
+dhcpcd wlan0
+
+#partitioning
+mklabel gpt
+mkpart ESP fat32 1MiB 513MiB
+set 1 boot on
+name 1 boot
+
+mkpart primary 513MiB 41GiB
+name 2 root
+
+mkpart primary 41GiB 100GiB
+name 3 home
+
+mkpart primary 100GiB -1
+name 4 store
+
+mkfs.fat -F32 /dev/nvme0n1p1
+mkfs.ext4 /dev/nvme0n1p2 && mkfs.ext4 /dev/nvme0n1p3 && mkfs.ext4 /dev/nvme0n1p4
+
+
+mount /dev/nvme0n1p2 /mnt
+mkdir /mnt/boot && mkdir /mnt/home
+mount /dev/nvme0n1p1 /mnt/boot/ && mount /dev/nvme0n1p3 /mnt/home/
+pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim iw wpa_supplicant dialog dhcpd
+
+genfstab -Lp /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt
+
+echo base-arch > /etc/hostname
+
+ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
+
+#Uncomment the needed locales in /etc/locale.gen, then generate them with:
+
+locale-gen
+
+echo LANG=en_US > /etc/locale.conf
+
+mkinitcpio -p linux
+
+bootctl install
+
+#create and edit /boot/loader/entries/arch.conf and add following where sda2 is current root partition
+title          Arch Linux
+linux          /vmlinuz-linux
+initrd         /initramfs-linux.img
+options        root=/dev/sda2 rw
+
+#Modify /boot/loader/loader.conf to select the default entry
+timeout 3
+default arch
+
+set root passwd
+
+
++++++++Desktop+++++++++++++
+
+pacman -S xfce4 xfce4-goodies chromium xorg-server xorg-xkb-utils xorg-server-utils xf86-input-mouse \
+xf86-input-keyboard xf86-video-nv xf86-video-vesa xorg-fonts-100dpi ttf-bitstream-vera freetype2 \
+xorg-fonts-type1 alsa-utils xorg-xinit networkmanager networkmanager-openconnect networkmanager-openvpn \
+networkmanager-pptp networkmanager-vpnc wget vi vim emacs mc lightdm lightdm-gtk-greeter gnome-keyring \
+htop libva-intel-driver acpi alsa-tools alsa-utils tlp zip p7zip
+
+
+
+
+//add some user
+
+useradd -m -d /home/usr -G wheel -s /bin/zsh usr
+
+sudo systemctl enable lightdm.service
+
+>>install yaourt
+#from normal user that exists in sudores
+
+https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+
+tar -xvf package-query.tar.gz
+
+makepkg -s
+
+sudo pacman -U ./<package name>
