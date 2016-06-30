@@ -1,0 +1,98 @@
+SETPORT:A1,A2;1,16,3,2,A1,A2
+
+
+^SETPORT:A1: CDROM
+^SETPORT:A2: SD
+^SETPORT:A: BLUE TOOTH
+^SETPORT:B: FINGER PRINT
+^SETPORT:D: MMS
+^SETPORT:E: PC VOICE
+^SETPORT:1: MODEM
+^SETPORT:2: PCUI
+^SETPORT:3: DIAG
+^SETPORT:4: PCSC
+^SETPORT:5: GPS
+^SETPORT:6: GPS CONTROL
+^SETPORT:16: NCM
+
+
+AT^SETPORT="A1,A2;1,16,3,2,A2"
+
+AT^SETPORT?
+
+AT^SETPORT=?
+
+AT^SETPORT="A1,A2;1,2,3"
+set to modem and rest
+AT^SETPORT="FF;1,16,3,2,A2"
+
+===================================HELP==========
+
+Working Huawei E3372h-153 SETPORT mappings
+
+
+replacing A1,A2 with FF turns off need for usb_modeswitch 
+
+
+AT^SETPORT="A1,A2;12,1,16,A1,A2"
+^GETPORTMODE: TYPE: WCDMA: huawei,PCUI:0,MDM:1,NDIS:2,CDROM:3,SD:4,
+
+AT^SETPORT="A1,A2;1,12,16,A1,A2"
+^GETPORTMODE: TYPE: WCDMA: huawei,MDM:0,PCUI:1,NDIS:2,CDROM:3,SD:4,
+
+AT^SETPORT="A1,A2;10,12,16,A1,A2"
+^GETPORTMODE: TYPE: WCDMA: huawei,MDM:0,PCUI:1,NDIS:2,CDROM:3,SD:4,
+
+AT^SETPORT="FF;10,12,16" 
+^GETPORTMODE: TYPE: WCDMA: huawei,MDM:0,PCUI:1,NDIS:2,
+
+AT^SETPORT="FF;5,10,12,16"
+^GETPORTMODE: TYPE: WCDMA: huawei,GPS:0,MDM:1,PCUI:2,NDIS:3,
+
+AT^SETPORT="FF;12,16"
+^GETPORTMODE: TYPE: WCDMA: huawei,PCUI:0,NDIS:1,
+
+
+AT^SETPORT="FF;10,12,16,5,A"
+^GETPORTMODE: TYPE: WCDMA: huawei,MDM:0,PCUI:1,NDIS:2,GPS:3,BT:4,
+
+
+this seems to work with windows mobile partner
+AT^SETPORT="FF;12,10,16"
+^GETPORTMODE: TYPE: WCDMA: huawei,PCUI:0,MDM:1,NDIS:2,
+
+
+ndis connection on PCUI port, couln't get this to work
+AT^NDISDUP=1,1,"4g.tele2.ee"
+AT^DHCP?
+
+
+
+
+ATI - display information about the modem and imei
+AT + CLAC - list of supported commands
+AT ^ FHVER - Check software version and modem
+AT ^ VERSION? - Firmware version
+AT ^ CARDLOCK? - Check the status of a modem lock and the number of attempts to enter the unlock code:
+CONNECT response: CARDLOCK: A, B, 0
+A = 2 the modem is enabled
+A = 1 modem is locked - SimLock
+A = 3, you used up all 10 attempts to enter the code
+B - number of remaining attempts to enter the unlock code (default is 10)
+AT ^ CARDLOCK = "unlock code" - enter the unlock code (8 digits)
+AT + CSQ - View the signal strength
+AT ^ SYSINFOEX - which network in the currently logged modem
+AT ^ SETPORT =? - Mapping of possible port configurations
+AT ^ SETPORT? - Displays the current port configuration
+AT ^ SETPORT = "combination" - switch ports required in combination, for example, AT ^ SETPORT = "A1, A2; 10,12,16, A1, A2"
+AT ^ RESET - reboot of the modem (needed after SETPORT)
+
+
+alot of info about this and kinda similar E3372s modem http://4pda.ru/forum/index.php?showtopic=582284&st=600
+non hilink firmware https://3ginfo.ru/downloads1431.html because hilink sucks for advanced things
+
+some more info http://habrahabr.ru/post/233007/
+
+
+my modem flash code
+Flash 64928896
