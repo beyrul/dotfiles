@@ -91,9 +91,9 @@ LD_LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH
 alias python='python2'
 export NODE_ENV=development
-alias translate="normit 'en' 'bg'"
 
 export QT_DEVICE_PIXEL_RATIO=2
 export GDK_SCALE=2
+export GDK_DPI_SCALE=0.6
 export VDPAU_DRIVER=va_gl
 export LIBVA_DRIVER_NAME=vdpau
