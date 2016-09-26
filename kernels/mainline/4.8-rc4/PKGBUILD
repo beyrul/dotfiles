@@ -26,9 +26,10 @@ source=("https://www.kernel.org/pub/linux/kernel/v4.x/testing/${_srcname}-${rcve
         # standard config files for mkinitcpio ramdisk
         'linux.preset'
         'change-default-console-loglevel.patch'
-	'001-nvme-1.diff'
-        '002-nvme-2.diff'
-        '003-nvme-3.diff')
+        'nvme-1.diff'
+        'nvme-2.diff'
+        'nvme-3.diff'
+        'nvme-4.diff')
 sha256sums=('8f07a0d76a7d1a30490582ba9642b7f28370102bc4acc4bb4b2586c8eabf4447'
             'SKIP'
             '56832aae956174d01cf5381947fbb6a0339902285aab2d3ffc804028a4fc5d4a'
@@ -37,9 +38,10 @@ sha256sums=('8f07a0d76a7d1a30490582ba9642b7f28370102bc4acc4bb4b2586c8eabf4447'
             '7d2bb66458b57d4df497ebb15a4ac130d08a0c084ae7845d0fe791a194efdb8e'
             'f0d90e756f14533ee67afda280500511a62465b4f76adcc5effa95a40045179c'
             '1256b241cd477b265a3c2d64bdc19ffe3c9bbcee82ea3994c590c2c76e767d99'
-	    '9762c163430aabca94efbab29ef702b483f1d9a97a912f84ad0239467cba16bc'
-            'ee13c83bf95f8880a4c1346ccf7b2e36772bc06174d3b812c91d7109aca5b600'
-            '52a44ac52356816e5b5f39a19c7de2eb08ce634a861821abe060debca479f7e2')
+            'e4cc11370d9a497f2c0d5dcc5c020181ca11ea498252b25fce08dceaf4ce46a4'
+            'f7a6c821220b49ab8488b1d11b762a670ec9d6901036b90fe47fd8ec82d326b6'
+            'f6d787177e329a17c4605472349f252e125f59277b51682d22a236913ec8c4cd'
+            '51fdc31e7e53bd395259c351970fc39c9f6399271f18118607e47032726eb0dd')
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
               '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
@@ -61,9 +63,10 @@ prepare() {
   # remove this when a Kconfig knob is made available by upstream
   # (relevant patch sent upstream: https://lkml.org/lkml/2011/7/26/227)
   patch -p1 -i "${srcdir}/change-default-console-loglevel.patch"
-  patch -p1 -i "${srcdir}/001-nvme-1.diff"
-  patch -p1 -i "${srcdir}/002-nvme-2.diff"
-  patch -p1 -i "${srcdir}/003-nvme-3.diff"
+  patch -p1 -i "${srcdir}/nvme-1.diff"
+  patch -p1 -i "${srcdir}/nvme-2.diff"
+  patch -p1 -i "${srcdir}/nvme-3.diff"
+  patch -p1 -i "${srcdir}/nvme-4.diff"
 
   if [ "${CARCH}" = "x86_64" ]; then
     cat "${srcdir}/config.x86_64" > ./.config
