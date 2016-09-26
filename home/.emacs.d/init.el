@@ -1,5 +1,13 @@
 (require 'package)
+(package-initialize)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+
+(load-theme 'foggy-night t)
+(global-linum-mode t)
+(global-hl-line-mode t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(nyan-mode t)
