@@ -1,4 +1,4 @@
-# XPS 13 - 2016 - 16Gb - 512Gb
+# XPS 13 (9350) - 2016 - 16Gb - 512Gb
 
 ### Keyboard illumination
 
