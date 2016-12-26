@@ -48,7 +48,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm archlinux bower docker web-search)
+plugins=(git npm archlinux bower docker web-search battery)
 export TERM="xterm-256color"
 source $ZSH/oh-my-zsh.sh
 
@@ -92,8 +92,5 @@ export LD_LIBRARY_PATH
 alias python='python2'
 export NODE_ENV=development
 
-export QT_DEVICE_PIXEL_RATIO=2
-export GDK_SCALE=2
-export GDK_DPI_SCALE=0.6
 export VDPAU_DRIVER=va_gl
 export LIBVA_DRIVER_NAME=vdpau
