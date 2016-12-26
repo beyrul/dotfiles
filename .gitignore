@@ -1,0 +1,2 @@
+home/.emacs.d/**/*
+!home/.emacs.d/init.el
