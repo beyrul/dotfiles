@@ -7,6 +7,7 @@
 
 # Set to 0 to disable, 1 to enable TLP.
 TLP_ENABLE=1
+TLP_DEBUG="bat disk lock nm path pm rf run sysfs udev usb"
 
 # Operation mode when no power supply can be detected: AC, BAT
 # Concerns some desktop and embedded hardware only.
@@ -32,8 +33,8 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 #   You *must* disable your distribution's governor settings or conflicts will
 #   occur. ondemand is sufficient for *almost all* workloads, you should know
 #   what you're doing!
-#CPU_SCALING_GOVERNOR_ON_AC=ondemand
-#CPU_SCALING_GOVERNOR_ON_BAT=powersave
+CPU_SCALING_GOVERNOR_ON_AC=operformance
+CPU_SCALING_GOVERNOR_ON_BAT=powersave
 
 # Set the min/max frequency available for the scaling governor.
 # Possible values strongly depend on your CPU. For available frequencies see
@@ -57,8 +58,8 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 # Important:
 # - This may conflict with your distribution's governor settings
 # - A value of 1 does *not* activate boosting, it just allows it
-#CPU_BOOST_ON_AC=1
-#CPU_BOOST_ON_BAT=0
+CPU_BOOST_ON_AC=1
+CPU_BOOST_ON_BAT=0
 
 # Minimize number of used CPU cores/hyper-threads under light load conditions
 SCHED_POWERSAVE_ON_AC=0
@@ -82,7 +83,7 @@ ENERGY_PERF_POLICY_ON_BAT=powersave
 
 # Hard disk devices; separate multiple devices with spaces (default: sda).
 # Devices can be specified by disk ID also (lookup with: tlp diskid).
-DISK_DEVICES="nvme0n1"
+DISK_DEVICES="sda sdb"
 
 # Hard disk advanced power management level: 1..254, 255 (max saving, min, off)
 # Levels 1..127 may spin down the disk; 255 allowable on most drives.
@@ -115,20 +116,20 @@ PCIE_ASPM_ON_BAT=powersave
 # Radeon graphics clock speed (profile method): low, mid, high, auto, default;
 # auto = mid on BAT, high on AC; default = use hardware defaults.
 # (Kernel >= 2.6.35 only, open-source radeon driver explicitly)
-RADEON_POWER_PROFILE_ON_AC=high
-RADEON_POWER_PROFILE_ON_BAT=low
+#RADEON_POWER_PROFILE_ON_AC=high
+#RADEON_POWER_PROFILE_ON_BAT=low
 
 # Radeon dynamic power management method (DPM): battery, performance
 # (Kernel >= 3.11 only, requires boot option radeon.dpm=1)
-RADEON_DPM_STATE_ON_AC=performance
-RADEON_DPM_STATE_ON_BAT=battery
+#RADEON_DPM_STATE_ON_AC=performance
+#RADEON_DPM_STATE_ON_BAT=battery
 
 # Radeon DPM performance level: auto, low, high; auto is recommended.
-RADEON_DPM_PERF_LEVEL_ON_AC=auto
-RADEON_DPM_PERF_LEVEL_ON_BAT=auto
+#RADEON_DPM_PERF_LEVEL_ON_AC=auto
+#RADEON_DPM_PERF_LEVEL_ON_BAT=auto
 
 # WiFi power saving mode: 1=disable, 5=enable; not supported by all adapters.
-WIFI_PWR_ON_AC=5
+WIFI_PWR_ON_AC=1
 WIFI_PWR_ON_BAT=5
 
 # Disable wake on LAN: Y/N
@@ -136,7 +137,7 @@ WOL_DISABLE=Y
 
 # Enable audio power saving for Intel HDA, AC97 devices (timeout in secs).
 # A value of 0 disables, >=1 enables power save.
-SOUND_POWER_SAVE_ON_AC=1
+SOUND_POWER_SAVE_ON_AC=0
 SOUND_POWER_SAVE_ON_BAT=1
 
 # Disable controller too (HDA only): Y/N
@@ -147,9 +148,9 @@ SOUND_POWER_SAVE_CONTROLLER=Y
 # Drive can be powered on again by releasing (and reinserting) the eject lever
 # or by pressing the disc eject button on newer models.
 # Note: an UltraBay/MediaBay hard disk is never powered off.
-BAY_POWEROFF_ON_BAT=0
+#BAY_POWEROFF_ON_BAT=0
 # Optical drive device to power off (default sr0).
-BAY_DEVICE="sr0"
+#BAY_DEVICE="sr0"
 
 # Runtime Power Management for PCI(e) bus devices: on=disable, auto=enable
 RUNTIME_PM_ON_AC=on
@@ -179,12 +180,13 @@ USB_AUTOSUSPEND=1
 
 # WWAN devices are excluded from USB autosuspend:
 # 0=do not exclude / 1=exclude
-USB_BLACKLIST_WWAN=0
+#USB_BLACKLIST_WWAN=1
 
 # Include listed devices into USB autosuspend even if already excluded
 # by the driver or WWAN blacklists above (separate with spaces).
 # Use lsusb to get the ids.
 #USB_WHITELIST="1111:2222 3333:4444"
+USB_WHITELIST="04f3:20d0"
 
 # Set to 1 to disable autosuspend before shutdown, 0 to do nothing
 # (workaround for USB devices that cause shutdown problems).
@@ -198,7 +200,7 @@ RESTORE_DEVICE_STATE_ON_STARTUP=0
 
 # Radio devices to disable on startup: bluetooth, wifi, wwan.
 # Separate multiple devices with spaces.
-DEVICES_TO_DISABLE_ON_STARTUP="bluetooth wwan"
+DEVICES_TO_DISABLE_ON_STARTUP="bluetooth"
 
 # Radio devices to enable on startup: bluetooth, wifi, wwan.
 # Separate multiple devices with spaces.
@@ -213,21 +215,21 @@ DEVICES_TO_DISABLE_ON_STARTUP="bluetooth wwan"
 #DEVICES_TO_ENABLE_ON_SHUTDOWN="wwan"
 
 # Radio devices to enable on AC: bluetooth, wifi, wwan
-DEVICES_TO_ENABLE_ON_AC="bluetooth wifi wwan"
+#DEVICES_TO_ENABLE_ON_AC="bluetooth wifi wwan"
 
 # Radio devices to disable on battery: bluetooth, wifi, wwan
-DEVICES_TO_DISABLE_ON_BAT="bluetooth wwan"
+DEVICES_TO_DISABLE_ON_BAT="bluetooth"
 
 # Radio devices to disable on battery when not in use (not connected):
 # bluetooth, wifi, wwan
-DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE="bluetooth wwan"
+#DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE="bluetooth wifi wwan"
 
 # Battery charge thresholds (ThinkPad only, tp-smapi or acpi-call kernel module
 # required). Charging starts when the remaining capacity falls below the
 # START_CHARGE_TRESH value and stops when exceeding the STOP_CHARGE_TRESH value.
 # Main / Internal battery (values in %)
-#START_CHARGE_THRESH_BAT0=75
-#STOP_CHARGE_THRESH_BAT0=80
+#START_CHARGE_THRESH_BAT0=15
+#STOP_CHARGE_THRESH_BAT0=95
 # Ultrabay / Slice / Replaceable battery (values in %)
 #START_CHARGE_THRESH_BAT1=75
 #STOP_CHARGE_THRESH_BAT1=80
