@@ -44,7 +44,12 @@ Uncomment the needed locales in /etc/locale.gen, then generate them with:
 
 locale-gen
 
-echo LANG=en_US > /etc/locale.conf
+##put in /etc/locale.conf
+LANG=en_US.UTF-8
+LC_COLLATE=C
+LC_TIME=en_US.UTF-8
+LC_MESSAGES=C
+
 
 mkinitcpio -p linux
 
