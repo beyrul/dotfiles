@@ -93,7 +93,7 @@ alias python='python2'
 alias fm='ranger'
 export NODE_ENV=development
 
-export VDPAU_DRIVER=va_gl
-export LIBVA_DRIVER_NAME=vdpau
+#export VDPAU_DRIVER=va_gl
+#export LIBVA_DRIVER_NAME=vdpau
 
 source $HOME/.cargo/env
