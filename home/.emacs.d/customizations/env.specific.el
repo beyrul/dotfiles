@@ -1,1 +1,1 @@
-(defvar ternjsPath "some_path_here")
+(defvar ternjsPath "/home/zetxx/npm/lib/node_modules/tern/emacs/")
