@@ -97,3 +97,4 @@ export NODE_ENV=development
 #export LIBVA_DRIVER_NAME=vdpau
 
 source $HOME/.cargo/env
+archey3 -c magenta
