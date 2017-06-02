@@ -189,6 +189,7 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 exec --no-startup-id xautolock -time 10 -locker "i3lock -f -c 000000 -i '/home/zetxx/Walpapers/fog_wave-wallpaper-1920x1080.png'" &
 exec --no-startup-id compton --config ~/.config/compton.conf -b &
+exec --no-startup-id xfce4-clipman &
 exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_toggle" &
 exec --no-startup-id nm-applet &
 exec --no-startup-id i3-msg 'workspace 1; exec /opt/visual-studio-code/code' &
