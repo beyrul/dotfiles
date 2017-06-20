@@ -192,6 +192,6 @@ exec --no-startup-id compton --config ~/.config/compton.conf -b &
 exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_toggle" &
 exec --no-startup-id nm-applet &
 exec --no-startup-id xfce4-clipman &
-exec --no-startup-id xsolaar &
+exec --no-startup-id solaar &
 exec --no-startup-id i3-msg 'workspace 1; exec /opt/visual-studio-code/code' &
 exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/chromium' &
