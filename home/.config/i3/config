@@ -152,11 +152,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $Locker i3lock && sleep 1
+set $Locker ~/dotfiles/home/i3-custom-lock.sh -s -b && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -f -c 000000 -i '/home/zetxx/Walpapers/fog_wave-wallpaper-1920x1080.png' && sleep 1, mode "default"
+    bindsym l exec --no-startup-id ~/dotfiles/home/i3-custom-lock.sh -s -b && sleep 1, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
