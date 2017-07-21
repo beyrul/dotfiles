@@ -37,7 +37,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec j4-dmenu-desktop
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -190,10 +190,11 @@ bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
-exec --no-startup-id xautolock -time 10 -locker "i3lock -f -c 000000 -i '/home/zetxx/Walpapers/fog_wave-wallpaper-1920x1080.png'" &
+exec --no-startup-id xautolock -time 10 -locker "~/dotfiles/home/i3-custom-lock.sh -s -b" &
 exec --no-startup-id compton --config ~/.config/compton.conf -b &
 exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_toggle" &
 exec --no-startup-id nm-applet &
+exec --no-startup-id lxsession &
 exec --no-startup-id xfce4-clipman &
 exec --no-startup-id solaar &
 exec --no-startup-id slack &
