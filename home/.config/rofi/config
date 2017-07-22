@@ -1,0 +1,10 @@
+rofi.fullscreen:   true
+rofi.cycle:        true
+rofi.lines:        10
+rofi.eh:           2
+rofi.bw:           0
+rofi.padding:      300
+rofi.terminal:     terminator
+rofi.color-normal: #2f343f,#f3f4f5,#2f343f,#2f243f,#f3f4f5
+rofi.color-window: #ef2f343f,#002b36,#eee8d5
+rofi.sidebar-mode: true
