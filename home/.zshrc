@@ -93,8 +93,7 @@ alias python='python2'
 alias fm='ranger'
 export NODE_ENV=development
 
-#export VDPAU_DRIVER=va_gl
-#export LIBVA_DRIVER_NAME=vdpau
+#export LIBVA_DRIVER_NAME=i965 #Intel GMA 4500 series and newer GPUs are supported by libva-intel-driver with mesa. // https://wiki.archlinux.org/index.php/Hardware_video_acceleration
 
 source $HOME/.cargo/env
 archey3 -c magenta
