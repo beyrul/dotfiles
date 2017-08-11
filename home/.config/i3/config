@@ -152,11 +152,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $Locker ~/dotfiles/home/i3-custom-lock.sh -s -b && sleep 1
+set $Locker i3lock-fancy -p && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/dotfiles/home/i3-custom-lock.sh -s -b && sleep 1, mode "default"
+    bindsym l exec --no-startup-id i3lock-fancy -p && sleep 1, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
@@ -190,7 +190,7 @@ bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
-exec --no-startup-id xautolock -time 10 -locker "~/dotfiles/home/i3-custom-lock.sh -s -b" &
+exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -p" &
 exec --no-startup-id compton --config ~/.config/compton.conf -b &
 exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_toggle" &
 exec --no-startup-id nm-applet &
