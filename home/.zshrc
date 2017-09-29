@@ -100,4 +100,5 @@ alias ndc='npm outdated | node ~/.usr/bin/ud2.js'
 export NODE_PATH="/home/zetxx/npm/lib/node_modules"
 alias term='/home/zetxx/term'
 alias fm='ranger'
+alias ls='exa'
 archey3
