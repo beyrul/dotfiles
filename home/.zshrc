@@ -97,3 +97,5 @@ export NODE_ENV=development
 
 source $HOME/.cargo/env
 archey3 -c magenta
+export LIBVA_DRIVER_NAME='i965'
+export VDPAU_DRIVER='va_gl'
