@@ -101,4 +101,5 @@ export NODE_PATH="/home/zetxx/npm/lib/node_modules"
 alias term='/home/zetxx/term'
 alias fm='ranger'
 alias ls='exa'
+export WINEARCH=win32
 archey3
