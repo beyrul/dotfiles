@@ -1,5 +1,5 @@
 #!/bin/bash
-wired_interfaces="en.*|eth.*"
+wired_interfaces="enp0s*"
 if [[ "$1" =~ $wired_interfaces ]]; then
     case "$2" in
         up)
