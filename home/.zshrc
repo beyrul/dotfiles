@@ -99,3 +99,9 @@ source $HOME/.cargo/env
 archey3 -c magenta
 export LIBVA_DRIVER_NAME='i965'
 export VDPAU_DRIVER='va_gl'
+alias ls='exa'
+export WINEARCH=win32
+alias exo-open-term='exo-open --launch TerminalEmulator'
+alias gus='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;'
+alias gbd='for dir in ./*; do (echo "$dir"; git -C "$dir" branch; echo "----------------"); done'
+export VISUAL="subl3"
