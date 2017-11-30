@@ -9,4 +9,6 @@ if [[ "$1" =~ $wired_interfaces ]]; then
             nmcli radio wifi on
             ;;
     esac
+else
+    nmcli radio wifi on
 fi
