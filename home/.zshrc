@@ -89,7 +89,7 @@ unset GREP_OPTIONS
 
 LD_LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH
-alias python='python2'
+#alias python='python2'
 alias fm='ranger'
 export NODE_ENV=development
 
