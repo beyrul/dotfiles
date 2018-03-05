@@ -69,9 +69,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -81,9 +81,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -110,6 +107,28 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+#Workspace definition
+# Workspace IDE
+set $workspace_ide IDE
+bindsym $mod+e workspace $workspace_ide
+bindsym $mod+Shift+i move container to workspace $workspace_ide
+assign [class="^Subl3$"] $workspace_ide
+assign [class="^Code$"] $workspace_ide
+
+# Workspace WWW
+set $workspace_www WWW
+bindsym $mod+w workspace $workspace_www
+bindsym $mod+Shift+w move container to workspace $workspace_www
+assign [class="^Firefox$"] $workspace_www
+assign [class="^Chromium$"] $workspace_www
+assign [class="^Opera$"] $workspace_www
+
+# Workspace Terminal
+set $workspace_term TERM
+bindsym $mod+t workspace $workspace_term
+bindsym $mod+Shift+t move container to workspace $workspace_term
+assign [class="^Terminator$"] $workspace_term
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -206,7 +225,7 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id xfce4-clipman &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id calib /home/zetxx/dotfiles/screen/color-profile/profile.icm
-exec --no-startup-id feh --bg-scale /home/zetxx/Wallpapers/amazing-mountains-view-1920x1080-wallpaper-765.jpg
+exec --no-startup-id feh --bg-center ~/Wallpapers/tino/1.jpg
 
 client.focused #526532 #526532 #ffffff #a4cb64
 client.focused_inactive #aea79f #aea79f #3c3b37 #aea79f
