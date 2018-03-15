@@ -1,0 +1,7 @@
+[Nemo Action]
+Active=true
+Name=Multi rename
+Comment=Multi rename
+Exec=thunar --bulk-rename %F
+Selection=Any
+Extensions=any;
