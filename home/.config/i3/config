@@ -130,6 +130,12 @@ bindsym $mod+t workspace $workspace_term
 bindsym $mod+Shift+t move container to workspace $workspace_term
 assign [class="^Terminator$"] $workspace_term
 
+# Workspace SQL
+set $workspace_sql SQL
+bindsym $mod+s workspace $workspace_sql
+bindsym $mod+Shift+s move container to workspace $workspace_sql
+assign [class="^Valentina Studio$"] $workspace_sql
+
 # move workspace
 bindsym $mod+p move workspace to output left
 bindsym $mod+o move workspace to output right
