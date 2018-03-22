@@ -130,6 +130,10 @@ bindsym $mod+t workspace $workspace_term
 bindsym $mod+Shift+t move container to workspace $workspace_term
 assign [class="^Terminator$"] $workspace_term
 
+# move workspace
+bindsym $mod+p move workspace to output left
+bindsym $mod+o move workspace to output right
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
