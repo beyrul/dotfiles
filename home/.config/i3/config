@@ -122,8 +122,8 @@ set $monitor_one HDMI-1
 set $monitor_two HDMI-2
 
 # move workspace
-bindsym $mod+p move workspace to output left
-bindsym $mod+o move workspace to output right
+bindsym $mod+m move workspace to output left
+bindsym $mod+n move workspace to output right
 
 #Workspace definition
 # Workspace IDE
@@ -155,6 +155,13 @@ bindsym $mod+s workspace $workspace_sql
 bindsym $mod+Shift+s move container to workspace $workspace_sql
 assign [class="^Valentina Studio$"] $workspace_sql
 workspace $workspace_sql output $monitor_two
+
+# Workspace RDP
+set $workspace_rdp RDP
+bindsym $mod+p workspace $workspace_rdp
+bindsym $mod+Shift+p move container to workspace $workspace_rdp
+assign [class="^Remmina$"] $workspace_rdp
+workspace $workspace_rdp output $monitor_two
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
