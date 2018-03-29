@@ -137,8 +137,8 @@ bindsym $mod+Shift+s move container to workspace $workspace_sql
 assign [class="^Valentina Studio$"] $workspace_sql
 
 # move workspace
-bindsym $mod+p move workspace to output left
-bindsym $mod+o move workspace to output right
+bindsym $mod+m move workspace to output left
+bindsym $mod+n move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
