@@ -124,6 +124,12 @@ assign [class="^Firefox$"] $workspace_www
 assign [class="^Chromium$"] $workspace_www
 assign [class="^Opera$"] $workspace_www
 
+# Workspace RDP
+set $workspace_rdp RDP
+bindsym $mod+p workspace $workspace_rdp
+bindsym $mod+Shift+p move container to workspace $workspace_rdp
+assign [class="^Remmina$"] $workspace_rdp
+
 # Workspace Terminal
 set $workspace_term TERM
 bindsym $mod+t workspace $workspace_term
