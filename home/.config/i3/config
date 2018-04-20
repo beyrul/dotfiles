@@ -12,7 +12,7 @@ font pango:xos4 Terminus 10
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-
+# remove windows titlebar
 for_window [class="^.*"] border pixel 1
 
 # Before i3 v4.8, we used to recommend this one as the default:
