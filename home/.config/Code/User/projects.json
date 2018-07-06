@@ -1,0 +1,92 @@
+[
+	{
+		"name": "standard",
+		"rootPath": "/store/Projects/impl-standard",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "accu atm",
+		"rootPath": "/store/Projects/impl-accu-atm",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "atm-screens",
+		"rootPath": "/store/Projects/atm-screens",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "accu card",
+		"rootPath": "/store/Projects/impl-accu-card",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-pan",
+		"rootPath": "/store/Projects/dev/ut-ctp-pan",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-tools",
+		"rootPath": "/store/Projects/dev/ut-tools",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-pos",
+		"rootPath": "/store/Projects/dev/ut-ctp-pos",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-iso",
+		"rootPath": "/store/Projects/dev/ut-ctp-iso",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-card",
+		"rootPath": "/store/Projects/dev/ut-card",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-atm",
+		"rootPath": "/store/Projects/dev/ut-atm",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-pos",
+		"rootPath": "/store/Projects/dev/ut-pos",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-aptra",
+		"rootPath": "/store/Projects/dev/ut-ctp-aptra",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "codec-payshield",
+		"rootPath": "/store/Projects/dev/ut-codec-payshield",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "impl-bluecode",
+		"rootPath": "/store/Projects/impl-bluecode",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "router-rpi-4G",
+		"rootPath": "/store/Projects-sep/router-rpi-4G/router/app",
+		"paths": [],
+		"group": ""
+	}
+]
