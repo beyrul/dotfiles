@@ -88,5 +88,11 @@
 		"rootPath": "/store/Projects-sep/router-rpi-4G/router/app",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "impl-ctp",
+		"rootPath": "/store/Projects/impl-ctp",
+		"paths": [],
+		"group": ""
 	}
 ]
