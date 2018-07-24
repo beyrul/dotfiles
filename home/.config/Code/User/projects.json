@@ -94,5 +94,11 @@
 		"rootPath": "/store/Projects/impl-ctp",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "atm-simulator",
+		"rootPath": "/store/Projects/atm-sim",
+		"paths": [],
+		"group": ""
 	}
 ]

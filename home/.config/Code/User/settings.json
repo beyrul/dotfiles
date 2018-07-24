@@ -130,5 +130,6 @@
   "gitlens.resultsExplorer.location": "scm",
   "gitlens.historyExplorer.location": "scm",
   "gitlens.hovers.enabled": false,
-  "gitlens.settings.mode": "advanced"
+  "gitlens.settings.mode": "advanced",
+  "window.restoreWindows": "none"
 }
