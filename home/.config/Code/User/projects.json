@@ -76,5 +76,11 @@
 		"rootPath": "/store/Projects/nodejs/router-rpi-4G/router/app",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "atm-simulator",
+		"rootPath": "/store/Projects/SG/atm-test",
+		"paths": [],
+		"group": ""
 	}
 ]
