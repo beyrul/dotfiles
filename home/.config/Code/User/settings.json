@@ -13,8 +13,9 @@
   },
   "terminal.external.linuxExec": "/usr/bin/terminator",
   "editor.insertSpaces": true,
-  "editor.renderWhitespace": true,
+  "editor.renderWhitespace": "all",
   "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
   "javascript.validate.enable": false,
   "eslint.options": {
     "configFile": "/home/zetxx/npm/lib/node_modules/ut-tools/eslint/.eslintrc"
@@ -131,5 +132,12 @@
   "gitlens.historyExplorer.location": "scm",
   "gitlens.hovers.enabled": false,
   "gitlens.settings.mode": "advanced",
-  "window.restoreWindows": "none"
+  "window.title": "VSCode ${dirty}⋮${rootName} ✎${activeEditorMedium}",
+  "editor.hover.sticky": false,
+  "editor.links": false,
+  "editor.renderLineHighlight": "all",
+  "editor.roundedSelection": false,
+  "workbench.editor.closeOnFileDelete": false,
+  "workbench.view.alwaysShowHeaderActions": true,
+  "workbench.editor.openPositioning": "last"
 }
