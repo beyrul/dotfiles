@@ -1,1 +1,80 @@
-
+[
+	{
+		"name": "maze",
+		"rootPath": "/store/Projects/nodejs/maze",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "maze-simple-client",
+		"rootPath": "/store/Projects/nodejs/maze-simple-client",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "impl-accu-atm",
+		"rootPath": "/store/Projects/SG/impl-accu-atm/impl-accu-atm",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "impl-accu-card",
+		"rootPath": "/store/Projects/SG/impl-accu-card/impl-accu-card",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-pan",
+		"rootPath": "/store/Projects/SG/dev/ut-ctp-pan",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-card",
+		"rootPath": "/store/Projects/SG/dev/ut-card",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "codec-payshield",
+		"rootPath": "/store/Projects/SG/dev/ut-codec-payshield",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-atm",
+		"rootPath": "/store/Projects/SG/dev/ut-atm",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-iso",
+		"rootPath": "/store/Projects/SG/dev/ut-iso",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-aptra",
+		"rootPath": "/store/Projects/SG/dev/ut-ctp-aptra",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ctp-iso",
+		"rootPath": "/store/Projects/SG/dev/ut-ctp-iso",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "router-rpi-4G",
+		"rootPath": "/store/Projects/nodejs/router-rpi-4G",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "router-rpi-4G-app",
+		"rootPath": "/store/Projects/nodejs/router-rpi-4G/router/app",
+		"paths": [],
+		"group": ""
+	}
+]
