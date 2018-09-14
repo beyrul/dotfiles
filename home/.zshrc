@@ -103,3 +103,5 @@ alias fm='ranger'
 alias ls='exa'
 export WINEARCH=win32
 archey3
+#source /usr/share/nvm/init-nvm.sh
+#export NPM_CONFIG_PREFIX=/home/zetxx/npm

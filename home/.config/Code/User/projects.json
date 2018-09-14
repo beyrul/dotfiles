@@ -100,5 +100,17 @@
 		"rootPath": "/store/Projects/atm-sim",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "electron-logger",
+		"rootPath": "/store/Projects/electron-logger",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "impl-mpay",
+		"rootPath": "/store/Projects/impl-mpay",
+		"paths": [],
+		"group": ""
 	}
 ]
