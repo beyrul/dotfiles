@@ -1,17 +1,5 @@
 [
 	{
-		"name": "maze",
-		"rootPath": "/store/Projects/nodejs/maze",
-		"paths": [],
-		"group": ""
-	},
-	{
-		"name": "maze-simple-client",
-		"rootPath": "/store/Projects/nodejs/maze-simple-client",
-		"paths": [],
-		"group": ""
-	},
-	{
 		"name": "impl-accu-atm",
 		"rootPath": "/store/Projects/SG/impl-accu-atm/impl-accu-atm",
 		"paths": [],
