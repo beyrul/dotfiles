@@ -89,7 +89,7 @@
   ],
   "workbench.sideBar.location": "right",
   "git.confirmSync": false,
-  "window.zoomLevel": 3,
+  "window.zoomLevel": 1,
   "mssql.connections": [{
     "server": "devdb08",
     "database": "impl-accu-atmcard-elin.angelov",
