@@ -165,6 +165,13 @@ bindsym $mod+Shift+p move container to workspace $workspace_rdp
 assign [class="^Remmina$"] $workspace_rdp
 workspace $workspace_rdp output $monitor_two
 
+# Workspace CHAT
+set $workspace_chat CHAT
+bindsym $mod+c workspace $workspace_chat
+bindsym $mod+Shift+c move container to workspace $workspace_chat
+assign [class="^Slack$"] $workspace_chat
+assign [class="^Skype$"] $workspace_chat
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
