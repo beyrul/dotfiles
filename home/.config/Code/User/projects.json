@@ -112,5 +112,17 @@
 		"rootPath": "/store/Projects/impl-mpay",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "ctp-payshield",
+		"rootPath": "/store/Projects/dev/ut-ctp-payshield",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "sql",
+		"rootPath": "/store/Projects/sql",
+		"paths": [],
+		"group": ""
 	}
 ]

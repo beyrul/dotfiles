@@ -139,5 +139,6 @@
   "editor.roundedSelection": false,
   "workbench.editor.closeOnFileDelete": false,
   "workbench.view.alwaysShowHeaderActions": true,
-  "workbench.editor.openPositioning": "last"
+  "workbench.editor.openPositioning": "last",
+  "javascript.updateImportsOnFileMove.enabled": "never"
 }
