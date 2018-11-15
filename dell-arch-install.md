@@ -1,37 +1,46 @@
-#enable wireless
-ip link set wlp58s0 up
+# Arch linux install
+## set root password
+```bash
+passwd
+```
+## enable wireless
+```bash
+iw dev
+wifi-menu -o <device>
+```
+## start sshd
+```bash
+systemctl start sshd.service
+```
 
-#connect
-wpa_supplicant -D nl80211,wext -i wlp58s0 -c <(wpa_passphrase "your_SSID" "your_key")
-#if no erros repeat with -B switch to the above command to run it in the background)
-
-dhcpcd wlan0
-
-#partitioning
-mklabel gpt
-mkpart ESP fat32 1MiB 513MiB
-set 1 boot on
-name 1 boot
-
-mkpart primary 513MiB 41GiB
-name 2 root
-
-mkpart primary 41GiB 100GiB
-name 3 home
-
-mkpart primary 100GiB -1
-name 4 store
-
-mkfs.fat -F32 /dev/nvme0n1p1
-mkfs.ext4 /dev/nvme0n1p2 && mkfs.ext4 /dev/nvme0n1p3 && mkfs.ext4 /dev/nvme0n1p4
-
-
-mount /dev/nvme0n1p2 /mnt
-mkdir /mnt/boot && mkdir /mnt/home
+## partition, format, mount
+```bash
+parted -a optimal /dev/nvme0n1 mktable gpt && \
+parted -a optimal /dev/nvme0n1 mkpart ESP fat32 1MiB 513MiB && \
+parted -a optimal /dev/nvme0n1 set 1 boot on && \
+parted -a optimal /dev/nvme0n1 name 1 boot && \
+parted -a optimal /dev/nvme0n1 mkpart primary 513MiB 41GiB && \
+parted -a optimal /dev/nvme0n1 name 2 root && \
+parted -a optimal /dev/nvme0n1 mkpart primary 41GiB 60GiB && \
+parted -a optimal /dev/nvme0n1 name 3 home && \
+parted -a optimal /dev/nvme0n1 mkpart primary 60GiB -1 && \
+parted -a optimal /dev/nvme0n1 name 4 store && \
+mkfs.fat -F32 /dev/nvme0n1p1 && \
+mkfs.ext4 /dev/nvme0n1p2 && mkfs.ext4 /dev/nvme0n1p3 && mkfs.ext4 /dev/nvme0n1p4 && \
+mount /dev/nvme0n1p2 /mnt && \
+mkdir /mnt/boot && mkdir /mnt/home && \
 mount /dev/nvme0n1p1 /mnt/boot/ && mount /dev/nvme0n1p3 /mnt/home/
-pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim iw wpa_supplicant dialog dhcpd
+```
 
-genfstab -Lp /mnt >> /mnt/etc/fstab
+## Install base, change shell
+```bash
+pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim iw wpa_supplicant dialog dhcpd i3 curl && \
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc && \
+chsh -s /bin/zsh
+```
+
+genfstab -Up /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
