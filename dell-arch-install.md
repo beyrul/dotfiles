@@ -34,36 +34,35 @@ mount /dev/nvme0n1p1 /mnt/boot/ && mount /dev/nvme0n1p3 /mnt/home/
 
 ## Install base, change shell
 ```bash
-pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim iw wpa_supplicant dialog dhcpd i3 curl && \
+pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim iw wpa_supplicant dialog dhcpd i3 curl \
+libinput networkmanager networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-vpnc \
+lightdm lightdm-gtk-greeter gnome-keyring htop libva-intel-driver acpi alsa-tools tlp zip p7zip \
+chromium xorg-server alsa-utils xorg-fonts-100dpi ttf-bitstream-vera freetype2 xorg-fonts-type1 network-manager-applet && \
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc && \
 chsh -s /bin/zsh
 ```
+## generate fstab and change root
+```bash
+genfstab -Up /mnt >> /mnt/etc/fstab && arch-chroot /mnt
+```
 
-genfstab -Up /mnt >> /mnt/etc/fstab
+## Hostname and time
+```bash
+echo base-arch > /etc/hostname && ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
+```
 
-arch-chroot /mnt
+## Locales:
+```bash
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && echo "LANG=en_US.UTF-8" >> /etc/locale.conf && echo "LC_COLLATE=C" >> /etc/locale.conf && echo "LC_TIME=en_US.UTF-8" >> /etc/locale.conf && echo "LC_MESSAGES=C" >> /etc/locale.conf && locale-gen
+```
+## boot
+```bash
+mkinitcpio -p linux && bootctl install
+```
 
-echo base-arch > /etc/hostname
-
-ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
-
-#Uncomment the needed locales in /etc/locale.gen, then generate them with:
-
-locale-gen
-
-## put in /etc/locale.conf
-LANG=en_US.UTF-8
-LC_COLLATE=C
-LC_TIME=en_US.UTF-8
-LC_MESSAGES=C
-
-
-mkinitcpio -p linux
-
-bootctl install
-
-#create and edit /boot/loader/entries/arch.conf and add following where sda2 is current root partition
+## create and edit /boot/loader/entries/arch.conf and add following where sda2 is current root partition
+```bash
 title          Arch Linux
 linux          /vmlinuz-linux
 initrd         /initramfs-linux.img
@@ -72,24 +71,12 @@ options        root=/dev/sda2 rw
 #Modify /boot/loader/loader.conf to select the default entry
 timeout 3
 default arch
-
-set root passwd
-
-
-+++++++Desktop+++++++++++++
-
-pacman -S xfce4 xfce4-goodies chromium xorg-server xorg-xkb-utils xorg-server-utils xf86-input-mouse \
-xf86-input-keyboard xf86-video-nv xf86-video-vesa xorg-fonts-100dpi ttf-bitstream-vera freetype2 \
-xorg-fonts-type1 alsa-utils xorg-xinit networkmanager networkmanager-openconnect networkmanager-openvpn \
-networkmanager-pptp networkmanager-vpnc wget vi vim emacs mc lightdm lightdm-gtk-greeter gnome-keyring \
-htop libva-intel-driver acpi alsa-tools alsa-utils tlp zip p7zip
-
-
-
-
-//add some user
-
+```
+## set root passwd
+## add some user
+```bash
 useradd -m -d /home/usr -G wheel -s /bin/zsh usr
+```
 
 sudo systemctl enable lightdm.service
 
