@@ -3,6 +3,8 @@
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+set_from_resource $GIT_TOKEN_STATUS echo "$GIT_TOKEN_STATUS"
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -193,7 +195,7 @@ bindsym $mod+r mode "resize"
 
 #title requires - i3ipc-python-git-latest
 bar {
-    status_command bumblebee-status -m title github amixer brightness battery date time layout -p date.left-click="gsimplecal" time.format="%H:%M CW %V" date.format="%a, %b %d %Y" layout.lang=us battery.warning=25 battery.critical=18 interval=5 github.token=d6516368210a73e0be2ea91aca922f656b6c4bab github.interval=30 -t greyish-powerline
+    status_command bumblebee-status -m title github amixer brightness battery date time layout -p date.left-click="gsimplecal" time.format="%H:%M CW %V" date.format="%a, %b %d %Y" layout.lang=us battery.warning=25 battery.critical=18 interval=5 github.token=$GIT_TOKEN_STATUS github.interval=30 -t greyish-powerline
     font pango:xos4 Terminus 12
     position          top
     tray_output       primary
@@ -247,7 +249,6 @@ exec --no-startup-id /usr/bin/lxpolkit &
 exec --no-startup-id compton --config ~/.config/compton.conf -b &
 exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_toggle" &
 exec --no-startup-id nm-applet &
-exec --no-startup-id xfce4-clipman &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id calib /home/zetxx/dotfiles/screen/color-profile/profile.icm
 exec --no-startup-id feh --bg-center ~/Wallpapers/tino/IMG_20180519_180102.jpg

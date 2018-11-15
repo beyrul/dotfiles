@@ -61,7 +61,7 @@
 	},
 	{
 		"name": "router-rpi-4G-app",
-		"rootPath": "/store/Projects/nodejs/router-rpi-4G/router/app",
+		"rootPath": "/store/Projects/nodejs/router-rpi-4G/app",
 		"paths": [],
 		"group": ""
 	},
