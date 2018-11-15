@@ -43,7 +43,7 @@ pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim curl && git clo
 ```bash
 genfstab -Up /mnt >> /mnt/etc/fstab && arch-chroot /mnt
 ```
-## locales and hostname
+## Hostname and time
 ```bash
 echo base-arch > /etc/hostname && ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
 ```
@@ -51,18 +51,11 @@ echo base-arch > /etc/hostname && ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/l
 ```bash
 pacman -S xfce4 xfce4-goodies chromium xorg-server xf86-input-mouse xf86-input-keyboard xf86-video-vesa xorg-fonts-100dpi ttf-bitstream-vera freetype2 xorg-fonts-type1 alsa-utils xorg-xinit networkmanager networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-vpnc wget vi vim emacs mc lightdm lightdm-gtk-greeter
 ```
-## Uncomment the needed locales in /etc/locale.gen, then generate them with:
+## Locales:
 ```bash
-locale-gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen && echo "LANG=en_US.UTF-8" >> /etc/locale.conf && echo "LC_COLLATE=C" >> /etc/locale.conf && echo "LC_TIME=en_US.UTF-8" >> /etc/locale.conf && echo "LC_MESSAGES=C" >> /etc/locale.conf
 ```
 
-## put in /etc/locale.conf
-```bash
-LANG=en_US.UTF-8
-LC_COLLATE=C
-LC_TIME=en_US.UTF-8
-LC_MESSAGES=C
-```
 ## set root password
 
 ## enable services
