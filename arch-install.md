@@ -7,29 +7,21 @@ passwd
 ```bash
 systemctl start sshd.service
 ```
-## partitioning
+## partitioning and format
 ```bash
-parted -a optimal /dev/sda
-
-mktable gpt
-
-mkpart primary 1 3
-name 1 grub
-set 1 bios_grub on
-
-mkpart primary 3 2051
-name 2 boot
-
-mkpart primary 2051 11000
-name 3 root
-
-mkpart primary 11000 -1
-name 4 home
-```
-## format partitions
-```bash
+parted -a optimal /dev/sda mktable gpt && \
+parted -a optimal /dev/sda mkpart primary 1 3 && \
+parted -a optimal /dev/sda name 1 grub && \
+parted -a optimal /dev/sda set 1 bios_grub on && \
+parted -a optimal /dev/sda mkpart primary 3 2051 && \
+parted -a optimal /dev/sda name 2 boot && \
+parted -a optimal /dev/sda mkpart primary 2051 11000 && \
+parted -a optimal /dev/sda name 3 root && \
+parted -a optimal /dev/sda mkpart primary 11000 21000 && \
+parted -a optimal /dev/sda name 4 home && \
 mkfs.ext4 /dev/sda2 && mkfs.ext4 /dev/sda3 && mkfs.ext4 /dev/sda4
 ```
+
 ## mount partitions
 ```bash
 mount /dev/sda3 /mnt && mkdir /mnt/boot && mkdir /mnt/home && mount /dev/sda2 /mnt/boot/ && mount /dev/sda4 /mnt/home/
