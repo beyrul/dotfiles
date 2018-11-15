@@ -32,7 +32,7 @@ mount /dev/sda2 /mnt/boot/ && mount /dev/sda4 /mnt/home/
 
 pacstrap /mnt base openssh zsh git dhcp grub sudo base-devel vim mc wget
 
-genfstab -Lp /mnt >> /mnt/etc/fstab
+genfstab -Up /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
@@ -77,19 +77,10 @@ useradd -m -d /home/usr -G wheel -s /bin/zsh usr
 
 sudo systemctl enable lightdm.service
 
->>install yaourt
+>> AUR
 from normal user that exists in sudores
 
-https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+curl https://aur.archlinux.org/cgit/aur.git/snapshot/trizen.tar.gz --output trizen.tar.gz
 
-tar -xvf package-query.tar.gz
-
-makepkg -s
-
+tar -xvf trizen.tar.gz && cd trizen/ && makepkg -s
 sudo pacman -U ./<package name>
-
->>>install yaourt
-
-home:
-/etc/default/grub
-   add: GRUB_CMDLINE_LINUX_DEFAULT="video=vesa:off vga=normal quiet"
