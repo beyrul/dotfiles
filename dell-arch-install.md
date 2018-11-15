@@ -46,6 +46,14 @@ chsh -s /bin/zsh
 ```bash
 genfstab -Up /mnt >> /mnt/etc/fstab && arch-chroot /mnt
 ```
+## Enable services
+```bash
+systemctl enable lightdm.service && systemctl enable sshd.service
+```
+## Enable wheel group
+```bash
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+```
 
 ## Hostname and time
 ```bash
@@ -77,16 +85,3 @@ default arch
 ```bash
 useradd -m -d /home/usr -G wheel -s /bin/zsh usr
 ```
-
-sudo systemctl enable lightdm.service
-
->>install yaourt
-#from normal user that exists in sudores
-
-https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
-
-tar -xvf package-query.tar.gz
-
-makepkg -s
-
-sudo pacman -U ./<package name>
