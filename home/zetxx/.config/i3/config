@@ -195,7 +195,7 @@ bindsym $mod+r mode "resize"
 
 #title requires - i3ipc-python-git-latest
 bar {
-    status_command bumblebee-status -m title github amixer brightness date time layout -p date.left-click="gsimplecal" time.format="%H:%M CW %V" date.format="%a, %b %d %Y" layout.lang=us battery.warning=25 battery.critical=18 interval=5 github.token=$GIT_TOKEN_STATUS github.interval=30 -t greyish-powerline
+    status_command bumblebee-status -m title github amixer date time layout -p date.left-click="gsimplecal" time.format="%H:%M CW %V" date.format="%a, %b %d %Y" layout.lang=us interval=1 github.token=$GIT_TOKEN_STATUS github.interval=1 -t greyish-powerline
     font pango:xos4 Terminus 12
     position          top
 
@@ -209,10 +209,6 @@ bar {
         urgent_workspace #FF0000 #FF0000 #ffffff
     }
 }
-
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -248,6 +244,7 @@ exec --no-startup-id /usr/bin/lxpolkit &
 exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_toggle" &
 exec --no-startup-id nm-applet &
 exec --no-startup-id clipmenud &
+exec --no-startup-id steam-runtime -silent &
 #exec --no-startup-id feh --bg-center ~/Wallpapers/tino/IMG_20180519_180102.jpg
 
 client.focused #526532 #526532 #ffffff #a4cb64
