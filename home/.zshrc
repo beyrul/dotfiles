@@ -102,6 +102,7 @@ alias term='/home/zetxx/term'
 alias fm='ranger'
 alias ls='exa'
 export WINEARCH=win32
+export EDITOR=vim
 archey3
 #source /usr/share/nvm/init-nvm.sh
 #export NPM_CONFIG_PREFIX=/home/zetxx/npm

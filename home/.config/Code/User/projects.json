@@ -78,12 +78,6 @@
 		"group": ""
 	},
 	{
-		"name": "impl-bluecode",
-		"rootPath": "/store/Projects/impl-bluecode",
-		"paths": [],
-		"group": ""
-	},
-	{
 		"name": "router-rpi-4G",
 		"rootPath": "/store/Projects-sep/router-rpi-4G/router/app",
 		"paths": [],
@@ -108,20 +102,38 @@
 		"group": ""
 	},
 	{
-		"name": "impl-mpay",
-		"rootPath": "/store/Projects/impl-mpay",
-		"paths": [],
-		"group": ""
-	},
-	{
 		"name": "ctp-payshield",
 		"rootPath": "/store/Projects/dev/ut-ctp-payshield",
 		"paths": [],
 		"group": ""
 	},
 	{
-		"name": "sql",
-		"rootPath": "/store/Projects/sql",
+		"name": "codec-ndc",
+		"rootPath": "/store/Projects/dev/ut-codec-ndc",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-database",
+		"rootPath": "/store/Projects/dev/ut-database",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "test-my-bridge",
+		"rootPath": "/store/Projects/bridg-wrong-playground",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ut-port-ftp",
+		"rootPath": "/store/Projects/dev/ut-port-ftp",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "bridg-wrong",
+		"rootPath": "/store/Projects/bridg-wrong",
 		"paths": [],
 		"group": ""
 	}
