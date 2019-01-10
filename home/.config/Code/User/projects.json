@@ -70,5 +70,23 @@
 		"rootPath": "/store/Projects/SG/atm-test",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "ut-ctp",
+		"rootPath": "/store/Projects/SG/dev/ut-ctp",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "bridg-wrong",
+		"rootPath": "/store/Projects/nodejs/bridg-wrong",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "bridg-wrong-playground",
+		"rootPath": "/store/Projects/nodejs/bridg-wrong-playground",
+		"paths": [],
+		"group": ""
 	}
 ]

@@ -100,7 +100,6 @@
     "savePassword": true
   }],
   "workbench.activityBar.visible": true,
-  "workbench.welcome.enabled": false,
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "vs-seti",
@@ -142,5 +141,14 @@
   "editor.roundedSelection": false,
   "workbench.editor.closeOnFileDelete": false,
   "workbench.view.alwaysShowHeaderActions": true,
-  "workbench.editor.openPositioning": "last"
+  "workbench.editor.openPositioning": "last",
+  "gitlens.views.repositories.enabled": false,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.fileHistory.location": "scm",
+  "gitlens.views.lineHistory.enabled": true,
+  "gitlens.views.lineHistory.location": "scm",
+  "gitlens.views.compare.location": "scm",
+  "gitlens.views.search.location": "scm",
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "native"
 }
