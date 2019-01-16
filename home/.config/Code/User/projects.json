@@ -3,138 +3,168 @@
 		"name": "standard",
 		"rootPath": "/store/Projects/impl-standard",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "accu atm",
 		"rootPath": "/store/Projects/impl-accu-atm",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "atm-screens",
 		"rootPath": "/store/Projects/atm-screens",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "accu card",
 		"rootPath": "/store/Projects/impl-accu-card",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-pan",
 		"rootPath": "/store/Projects/dev/ut-ctp-pan",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-tools",
 		"rootPath": "/store/Projects/dev/ut-tools",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-pos",
 		"rootPath": "/store/Projects/dev/ut-ctp-pos",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-iso",
 		"rootPath": "/store/Projects/dev/ut-ctp-iso",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-card",
 		"rootPath": "/store/Projects/dev/ut-card",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-atm",
 		"rootPath": "/store/Projects/dev/ut-atm",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-pos",
 		"rootPath": "/store/Projects/dev/ut-pos",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-aptra",
 		"rootPath": "/store/Projects/dev/ut-ctp-aptra",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "codec-payshield",
 		"rootPath": "/store/Projects/dev/ut-codec-payshield",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "router-rpi-4G",
 		"rootPath": "/store/Projects-sep/router-rpi-4G/router/app",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "impl-ctp",
 		"rootPath": "/store/Projects/impl-ctp",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "atm-simulator",
 		"rootPath": "/store/Projects/atm-sim",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "electron-logger",
 		"rootPath": "/store/Projects/electron-logger",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-payshield",
 		"rootPath": "/store/Projects/dev/ut-ctp-payshield",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "codec-ndc",
 		"rootPath": "/store/Projects/dev/ut-codec-ndc",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-database",
 		"rootPath": "/store/Projects/dev/ut-database",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "test-my-bridge",
 		"rootPath": "/store/Projects/bridg-wrong-playground",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-port-ftp",
 		"rootPath": "/store/Projects/dev/ut-port-ftp",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "bridg-wrong",
 		"rootPath": "/store/Projects/bridg-wrong",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "atm-simulator-test",
+		"rootPath": "/store/Projects/atm-simulator-test",
+		"paths": [],
+		"group": "",
+		"enabled": true
 	}
 ]
