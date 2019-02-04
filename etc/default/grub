@@ -1,2 +1,5 @@
 #only this should be added
-GRUB_CMDLINE_LINUX_DEFAULT="video=vesa:off vga=normal quiet"
+GRUB_CMDLINE_LINUX_DEFAULT="video=vesa:off vga=normal quiet amdgpu.ppfeaturemask=0xfffd7fff"
+## amdgpu module
+#GRUB_CMDLINE_LINUX_DEFAULT="video=vesa:off vga=normal quiet rcutree.rcu_idle_gp_delay=1 radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1 amdgpu.ppfeaturemask=0xfffd7fff"
+
