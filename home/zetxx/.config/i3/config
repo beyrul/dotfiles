@@ -272,6 +272,7 @@ exec --no-startup-id setxkbmap -layout "us,bg(phonetic)" -option "grp:ctrls_togg
 exec --no-startup-id nm-applet &
 exec --no-startup-id transmission-qt &
 exec --no-startup-id clipmenud &
+exec --no-startup-id radeon-profile &
 exec --no-startup-id steam-runtime -silent &
 #exec --no-startup-id feh --bg-center ~/Wallpapers/tino/IMG_20180519_180102.jpg
 
