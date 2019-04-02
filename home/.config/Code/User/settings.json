@@ -149,5 +149,6 @@
   "gitlens.views.compare.location": "scm",
   "gitlens.views.search.location": "scm",
   "telemetry.enableTelemetry": false,
-  "window.titleBarStyle": "native"
+  "window.titleBarStyle": "native",
+  "git.autofetch": true
 }
