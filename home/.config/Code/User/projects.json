@@ -3,90 +3,119 @@
 		"name": "impl-accu-atm",
 		"rootPath": "/store/Projects/SG/impl-accu-atm/impl-accu-atm",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "impl-accu-card",
 		"rootPath": "/store/Projects/SG/impl-accu-card/impl-accu-card",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-pan",
 		"rootPath": "/store/Projects/SG/dev/ut-ctp-pan",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-card",
 		"rootPath": "/store/Projects/SG/dev/ut-card",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "codec-payshield",
 		"rootPath": "/store/Projects/SG/dev/ut-codec-payshield",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-atm",
 		"rootPath": "/store/Projects/SG/dev/ut-atm",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-iso",
 		"rootPath": "/store/Projects/SG/dev/ut-iso",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-aptra",
 		"rootPath": "/store/Projects/SG/dev/ut-ctp-aptra",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ctp-iso",
 		"rootPath": "/store/Projects/SG/dev/ut-ctp-iso",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "router-rpi-4G",
 		"rootPath": "/store/Projects/nodejs/router-rpi-4G",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "router-rpi-4G-app",
 		"rootPath": "/store/Projects/nodejs/router-rpi-4G/app",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "atm-simulator",
 		"rootPath": "/store/Projects/SG/atm-test",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "ut-ctp",
 		"rootPath": "/store/Projects/SG/dev/ut-ctp",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "bridg-wrong",
 		"rootPath": "/store/Projects/nodejs/bridg-wrong",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
 	},
 	{
 		"name": "bridg-wrong-playground",
 		"rootPath": "/store/Projects/nodejs/bridg-wrong-playground",
 		"paths": [],
-		"group": ""
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "atm-simulator-test",
+		"rootPath": "/store/Projects/SG/atm-simulator-test",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "kicb-mwallet",
+		"rootPath": "/store/Projects/SG/impl-kicb-mwallet",
+		"paths": [],
+		"group": "",
+		"enabled": true
 	}
 ]
